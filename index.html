@@ -295,8 +295,17 @@
             overflow: hidden;
         }
 
+        #hero .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+            width: 100%;
+        }
+
         .hero-content {
-            max-width: 700px;
+            flex: 1;
+            max-width: 580px;
         }
 
         .hero-badge {
@@ -456,10 +465,7 @@
         }
 
         .hero-visual {
-            position: absolute;
-            right: 40px;
-            top: 50%;
-            transform: translateY(-50%);
+            flex-shrink: 0;
             pointer-events: none;
             animation: heroPhotoIn 0.8s ease 0.5s both;
         }
@@ -539,12 +545,12 @@
         @keyframes heroPhotoIn {
             from {
                 opacity: 0;
-                transform: translateY(-50%) scale(0.9);
+                transform: scale(0.9);
             }
 
             to {
                 opacity: 1;
-                transform: translateY(-50%) scale(1);
+                transform: scale(1);
             }
         }
 
@@ -1415,7 +1421,7 @@
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-inner">
-            <div class="nav-logo">&lt;<span>Ahmed</span> /&gt;</div>
+            <div class="nav-logo">&lt;<span>Ahmed</span>/&gt;</div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
